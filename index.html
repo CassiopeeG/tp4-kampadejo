@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Kampadejo - Expériences de camping</title>
     <link rel="stylesheet" href="assets/css/style.css">
@@ -12,10 +13,22 @@
 
 <body>
     <!-- Lien Aller au contenu -->
-    <header class="entete">
+    <a href="#contenu" class="sauter screen-reader-only focusable">Allez au contenu</a> 
+
+    <header class="entete" role="banner">
         <div class="conteneur">
             <!-- Menu principal -->
-
+             <nav class="nav nav--closed">
+                <a class="logo" href="">
+                    <img src="assets/images/logo.svg" alt="">
+                </a>
+                <ul class="nav__list">
+                    <li><a href="#entreprise" class="nav__list-item">Entreprise</a></li>
+                    <li><a href="#experiences" class="nav__list-item">Expériences</a></li>
+                    <li><a href="#services" class="nav__list-item">Services</a></li>
+                    <li><a href="#contact" class="nav__list-item">Contact</a></li>
+                </ul>
+             </nav>
 
         </div>
         <div class="conteneur accroche">
@@ -26,7 +39,7 @@
             </div>
         </div>
     </header>
-    <main>
+    <main role="main">
         <section class="entreprise conteneur rangee" id="entreprise">
             <div class="cols_7_de_12">
                 <h2 id="contenu">Notre entreprise</h2>
@@ -136,7 +149,7 @@
             </div>
         </section>
     </main>
-    <footer id="contact">
+    <footer id="contact" role="contentinfo">
         <div class="conteneur rangee">
             <div class="cols_4_de_12">
                 <h2>Nous joindre</h2>
