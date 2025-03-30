@@ -41,13 +41,13 @@
      * les remplacer par d'autres styles qui peuvent être plus
      * en accord avec la direction visuelle du projet.
      */
-    outline: none;
+    outline: none; 
     /* AUTRES STYLES EN REMPLACEMENT DU OUTLINE */
     /*
      * Les règles outline-offset et outline permettent
      * de modifier l'apparence du outline par défaut des navigateurs.
      */
-    outline-offset: -5px;
+    outline-offset: -5px;   
     outline: #dba70d auto 5px;
 }
 
@@ -104,8 +104,9 @@
 
 
 .nav__link:focus {
-    outline-offset: -5px;
-    outline: #dba70d auto 5px;
+    /* outline-offset: -5px;
+    outline: #dba70d auto 5px; */
+    border-bottom: 2px solid #dba70d;
 }
 
 /** Une classe nav__link--active
@@ -113,13 +114,13 @@
     pour l'item de menu actif
     **/
 .nav__link--active {
-    border-left: 5px solid rgba(101, 68, 180, 1);
+    border-left: 5px solid #dba70d;
 }
 
 @media (min-width: 600px) {
     .nav__link--active {
         border-left: none;
-        border-bottom: 5px solid rgba(101, 68, 180, 1);
+        border-bottom: 5px solid #dba70d;
     }
 }
 
