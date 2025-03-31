@@ -32,23 +32,12 @@
 .nav__control:hover,
 .nav__control:active {
     color: white;
-    background-color: rgba(255, 255, 255, 0.25);
+
 }
 
 .nav__control:focus {
-    /* En mettant la règle outline: none;, les styles du navigateur
-     * pour les éléments en cours de focus sont effacés. Il faut alors
-     * les remplacer par d'autres styles qui peuvent être plus
-     * en accord avec la direction visuelle du projet.
-     */
     outline: none; 
-    /* AUTRES STYLES EN REMPLACEMENT DU OUTLINE */
-    /*
-     * Les règles outline-offset et outline permettent
-     * de modifier l'apparence du outline par défaut des navigateurs.
-     */
-    outline-offset: -5px;   
-    outline: #dba70d auto 5px;
+    border: 2px solid #dba70d;
 }
 
 
@@ -80,10 +69,12 @@
 
 /* Liens du menu */
 .nav__link {
-    /* background-color: rgba(145, 0, 145, 0.2); */
+    border-bottom: #dba70d;
+    outline: none; 
     display: block;
     padding: 5px 10px;
     width: 100%;
+    text-align: left;
 }
 
 .nav__link:link,
@@ -94,25 +85,26 @@
 
 .nav__link:hover {
     color: #dba70d;
-    /* background-color: darkmagenta; */
 }
 
 .nav__link:active {
     color: #dba70d;
-    /* background-color: magenta; */
+    border-bottom: #dba70d;
 }
 
 
 .nav__link:focus {
-    /* outline-offset: -5px;
-    outline: #dba70d auto 5px; */
-    border-bottom: 2px solid #dba70d;
+    border-left: 2px solid #dba70d;  
 }
 
-/** Une classe nav__link--active
-    sert à définir un état différent
-    pour l'item de menu actif
-    **/
+@media (min-width: 600px) {
+    .nav__link:focus {
+        border-left: none;
+        border-bottom: 2px solid #dba70d;  
+    }
+}
+
+
 .nav__link--active {
     border-left: 5px solid #dba70d;
 }
